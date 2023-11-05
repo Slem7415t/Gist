@@ -1,0 +1,22 @@
+<!-- Создать файл sprite.svg и поместить в него все svg: -->
+
+<svg style="display: none;" xmlns="http://www.w3.org/2000/svg"> <!--оболочка для списка svg-->
+    <symbol viewBox="0 0 10 10" id="<!--id svg-->"> <!--обертка для каждого svg-->
+        <circle cx="5" cy="5" r="5" fill="#EF2FA2"/> <!--сам svg--> <!--fill лучше от сюда удалить
+        и добавить его через класс в css, чтоб изменять его значение-->
+    </symbol>
+</svg>
+
+<!-- В html добавить команду вызова: -->
+
+<svg class="<!--class svg-->">
+    <use xlink:href="<!--путь к sprite.svg-->#<!--id svg-->"></use>
+</svg>
+
+<!-- в файле .css создаем класс для svg -->
+
+.<!--class svg--> {
+    width: 20px; <!--длина-->
+    height: 20px; <!--высота-->
+    fill: none; <!--цвет-->
+} <!--пример-->
